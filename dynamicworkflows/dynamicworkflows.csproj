@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AzureFunctionsVersion>V3</AzureFunctionsVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Jint" Version="2.11.58" />
+        <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
+        <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.DurableTask" Version="2.5.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.18" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.18" />
+        <PackageReference Include="Microsoft.FeatureManagement" Version="2.3.0" />
+        <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.13" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Update="host.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="local.settings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting, Version=3.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <HintPath>..\..\..\..\Users\Laurentiui\AppData\Roaming\JetBrains\Rider2020.3\azure-functions-coretools\3.0.3388\Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.CodeAnalysis.Scripting, Version=3.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <HintPath>..\..\..\..\Users\Laurentiui\AppData\Roaming\JetBrains\Rider2020.3\azure-functions-coretools\3.0.3388\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>

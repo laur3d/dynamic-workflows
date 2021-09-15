@@ -35,15 +35,6 @@
             return new DynamicStep<T, U>(ActionName.Branch, param, condition, leftSteps, rightSteps);
         }
 
-        // public DynamicStep(string fn, List<DynamicStep< T,U>> leftSteps, List<DynamicStep< T,U>> rightSteps, U param )
-        // {
-        //     Action = ActionName.Branch;
-        //     this.param = param;
-        //     Fn = fn;
-        //     LeftSteps = leftSteps ?? new List<DynamicStep<T, U>>();
-        //     RightSteps = rightSteps ?? new List<DynamicStep<T, U>>();
-        // }
-
         [JsonConstructor]
         public DynamicStep(string action, U param, string fn,  List<DynamicStep< T,U>> leftSteps = default, List<DynamicStep< T,U>> rightSteps = default)
         {
